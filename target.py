@@ -9,4 +9,4 @@ class Target:
         self.y = pos.y
 
     def draw(self):
-        ellipse(surface=screen, color=(255, 182, 193), rect=Rect(self.x-self.radius, self.y-self.radius, self.radius*2, self.radius*2))
+        ellipse(surface=screen, color=(0, 136, 255), rect=Rect(self.x-self.radius, self.y-self.radius, self.radius*2, self.radius*2))
