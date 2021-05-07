@@ -20,7 +20,11 @@ class Agent:
         self.fitness = 0
 
     def calcFitness(self, target, count):
+        # Euclidean distance
         distance = sqrt((target.x - self.pos.x)**2 + (target.y - self.pos.y)**2)
+        # Manhattan distance
+        # distance = abs((target.x - self.pos.x)) + abs((target.y - self.pos.y))
+
         self.fitness = width + -width * distance/width
 
         if self.completed:

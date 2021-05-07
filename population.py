@@ -40,11 +40,8 @@ class Population:
     def selection(self):
         newAgents = []
         for _ in range(len(self.agents)):
-            while True:
-                parentA = self.matingPool[randrange(len(self.matingPool))].dna
-                parentB = self.matingPool[randrange(len(self.matingPool))].dna
-                if parentA != parentB:
-                    break
+            parentA = self.matingPool[randrange(len(self.matingPool))].dna
+            parentB = self.matingPool[randrange(len(self.matingPool))].dna
             child = parentA.crossover(parentB)
             child.mutate(self.mutationRate)
             newAgents.append(Agent(dna=child))
